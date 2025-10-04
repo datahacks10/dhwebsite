@@ -196,7 +196,7 @@ jobs:
                   <li><strong>Phase 3:</strong> Scale to 50% after validation</li>
                   <li><strong>Phase 4:</strong> Complete rollout to 100%</li>
                 </ul>
-                <p className="mt-4 text-sm">Automated rollback triggers: Error rate > 1%, Response time > 500ms, or custom business metrics</p>
+                <p className="mt-4 text-sm">Automated rollback triggers: Error rate &gt; 1%, Response time &gt; 500ms, or custom business metrics</p>
               </div>
 
               <h2 className="text-2xl font-semibold mt-8 mb-4">Infrastructure as Code</h2>
@@ -290,10 +290,10 @@ resource "aws_ecs_service" "app" {
 {`# Example deployment health check
 deployment_health_check:
   metrics:
-    - error_rate < 1%
-    - response_time_p95 < 500ms
-    - cpu_usage < 80%
-    - memory_usage < 85%
+    - error_rate &lt; 1%
+    - response_time_p95 &lt; 500ms
+    - cpu_usage &lt; 80%
+    - memory_usage &lt; 85%
   duration: 10m
   on_failure: 
     action: rollback
